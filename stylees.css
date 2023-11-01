@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+:root{
+    --color-neutral-0: rgba(0, 0, 0, 0.89);
+    --color-neutral-10: #171717;
+    --color-neutral-30: rgb(168, 165, 165);
+    --color-neutral-40: rgb(248, 248, 248);
+    --color-neutral-50: rgba(11, 66, 4, 0.342);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contact-bg{
+    width: 100%;
+    height: 30vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(./photo/cours.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.contact-bg  p {
+    color: #fff;
+    font-size: 20px;
+}
+
+.contact-bg h2 a{
+    color: #fff;
+    font-size: 35px;
+}
+
+.inscription{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(./photo/inscription\ back.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-inscr{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 6px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    margin-top: 30px;
+    box-shadow: 0 5px 10px rgba(116, 231, 235, 0.966);
+}
+
+.container-inscr header{
+    position: relative;
+    font-size: 25px;
+    font-weight: 600;
+    color: #333;
+}
+
+.container-inscr header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: rgb(10, 10, 10);
+}
+
+.container-inscr form{
+    position: relative;
+    margin-top: 16px;
+    min-height: 490px;
+    background-color: #fff;
+}
+
+.container-inscr form .details{
+    margin-top: 30px;   
+}
+
+.container-inscr form .details.ID{
+    margin-top: 10px;   
+}
+
+.container-inscr form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.container-inscr form .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+
+.input-field label{
+    font-size: 15px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.input-field input{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+.input-field input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(99, 241, 234, 0.856);
+}
+
+.input-field input[type="date"]{
+    color: #707070;
+}
+
+.input-field input[type="date"]:valid{
+    color: #333;
+}
+
+.container-inscr form button , .backBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border:none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: rgba(16, 168, 168, 0.863);
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.container-inscr form button,
+.container-inscr form .backBtn{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+form button:hover{
+    background-color: rgba(16, 168, 168, 0.840);
+}
+
+form button i,
+form .backBtn i{
+    margin: 0 6px;
+}
+
+form .buttons{
+    display: flex;
+    align-items: center;
+}
+
+form .buttons button , .backBtn{
+    margin-right: 14px;
+}
+
+@media (max-width: 750px) {
+    .container-inscr form{
+        overflow-y: scroll;
+    }
+
+    .container-inscr form::-webkit-scrollbar{
+        display: none;
+    }
+
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px){
+    form .fields .input-field{
+        width: 100%;
+    }
+}
+

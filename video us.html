@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video enligne</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <div class="video">
+        <div class="contact-bg">
+            <h2><a href="#">BINEVENUE AU COURS EN LIGNE</a></h2>
+            <p>Université Libre Protestante en Afrique Vous donne la posibilité de suivre des cours en ligne à travers de notre site</p>
+        </div>
+    </div>
+    
+    <h3 class="video-heading">Video Galerie</h3>
+    <div class="video-container">
+        <div class="main-video">
+            <div class="videos">
+                <video src="photo/ACCESS01.mp4" controls muted autoplay></video>
+                <h3 class="title">01. Création de la base de donnée</h3>
+            </div>
+        </div>
+
+        <div class="video-list">
+            <div class="vid active">
+                <video src="photo/ACCESS01.mp4" muted></video>
+                <h3 class="title">01. Création de la base de donnée</h3>
+            </div>
+            <div class="vid">
+                <video src="photo/ACCESS02.mp4" muted></video>
+                <h3 class="title">02. Création de la base de donnée</h3>
+            </div>
+            <div class="vid">
+                <video src="photo/ACCESS03.mp4" muted></video>
+                <h3 class="title">03. Création de la base de donnée</h3>
+            </div>
+            <div class="vid">
+                <video src="photo/ACCESS04.mp4" muted></video>
+                <h3 class="title">04. Création de la base de donnée</h3>
+            </div>
+            <div class="vid">
+                <video src="photo/ACCESS05.mp4" muted></video>
+                <h3 class="title">05. Création de la base de donnée</h3>
+            </div>
+            <div class="vid">
+                <video src="photo/ACCESS06.mp4" muted></video>
+                <h3 class="title">06. Création de la base de donnée</h3>
+            </div>
+            <div class="vid">
+                <video src="photo/ACCESS07.mp4" muted></video>
+                <h3 class="title">07. Création de la base de donnée</h3>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-content">
+            <div id="footer-contact">
+                <h3>ULPA UNIVERSITY</h3>
+                <p>Université Protestante</p>
+
+                <div id="footer-social-media">
+                    <a href="#" class="footer-link" id="facebook"></a>
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                    <a href="#" class="footer-link" id="whatsapp"></a>
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <a href="#" class="footer-link" id="youtube"></a>
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Lien Rapide</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Accueil</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Apropos</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Dirigeants</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Cours</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Contact</a>
+                </li>
+                
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Lien Utile</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">formation center</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Commentaire</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Confidentialité</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Questions</a>
+                </li>
+            </ul>
+
+            <div id="footer-sisbscribe">
+                <h3>S'inscrire</h3>
+                <p>Inscrivez-vous pour recevoir plus d'information 
+                    dans le Mail
+                </p>
+
+                <div id="input-group">
+                    <input type="mail" id="mail">
+                    <button>
+                        <i class="fa-solid fa-envelope"></i>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+        <hr>
+        <div class="footer-copyright">
+            @2023 By Jules Kahundu Augustin
+        </div>
+    </footer>
+
+    <script>
+        let listVideo = document.querySelectorAll('.video-list .vid'); 
+        let mainVideo = document.querySelector('.main-video video');
+        let title = document.querySelector('.main-video .title');
+
+        listVideo.forEach(Video =>{
+            video.onclick = () =>{
+                listVideo.forEach(vid => vid.classList.remove('active'));
+                video.classList.add('active');
+                if (video.classList.contains('active')) {
+                    let src = video.children[0].getAttribute('src');
+                    mainVideo.src = src;
+                    let text = video.children[1].innerHTML;
+                    title.innerHTML = text;
+                };
+            };
+        });
+    </script>
+
+</body>
+</html>
